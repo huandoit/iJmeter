@@ -35,7 +35,7 @@ do
     echo "生成jmx压测脚本 ${jmx_filename}"
 
     if [[ "${os_type}" == "Darwin" ]]; then
-        sed -i "" "s/thread_num/${num}/g" ${jmx_filename}
+        sed -i "s/thread_num/${num}/g" ${jmx_filename}
     else
         sed -i "s/thread_num/${num}/g" ${jmx_filename}
     fi
